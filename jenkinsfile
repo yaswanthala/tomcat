@@ -1,0 +1,11 @@
+pipeline {
+    agent any 
+    stages {
+        stage('tomcat') { 
+            steps {
+               sh "ansible-playbook tomcat.yml -i hosts"
+            }
+        }
+       
+    }
+}
